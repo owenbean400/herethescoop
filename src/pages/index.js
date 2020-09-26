@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Link } from "gatsby";
 
 import Button from '../components/button.js';
 import Navbar from '../components/navbar/navbar.js';
@@ -88,7 +89,7 @@ class IndexPage extends Component {
               <img src={Arrow} className="image-button" onClick={this.rightClickedIcecream}/>
             </div>
             <h4>{ICECREAM_FLAVOR[this.state.IceCreamFlavorNumber].iceCreamFlavor}</h4>
-            <Button buttonName="More Flavors"/>
+            <Button buttonName="More Flavors" />
           </section>
           <section id="our-story-container">
               <div>
