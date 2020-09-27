@@ -1,0 +1,39 @@
+@import '../../sassPages/variable.sass'
+
+.icecream-flavor-menu
+    &:nth-of-type(odd)
+        background-color: $primaryColor
+    section
+        padding: 64px 16px
+        width: 100%
+        background-repeat: no-repeat
+        background-position: center
+        @media screen and ( min-width: $phonesize)
+            background-size: auto 80%
+        @media screen and ( max-width: $phonesize)
+            background-size: 60% auto
+            
+
+        h2
+            text-align: center
+            margin-bottom: 48px
+
+        ul
+            display: grid
+            list-style-type: none
+            padding: none
+            grid-column-gap: 64px
+            grid-row-gap: 16px
+            margin: 32px
+            text-align: center
+            @media screen and ( min-width: $phonesize)
+                grid-template-columns: 25% 25% 25%
+                justify-content: space-evenly
+            @media screen and ( max-width: $phonesize)
+                grid-template-columns: auto
+                justify-content: center
+
+            li
+                padding: none
+                margin: none
+            

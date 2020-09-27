@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { Link } from 'gatsby';
 import './navbar.sass';
 
 const NAVLINKS = ["Flavors", "Our Stories", "Find Us"];
+const LINK_CHANGE = /\w/g;
 
 class Navbar extends Component{
     constructor(props) {
@@ -39,7 +41,7 @@ class Navbar extends Component{
 
     render(){
         const LIST_ITEMS = NAVLINKS.map((NAVLINKS) => 
-        <li key={NAVLINKS}>{NAVLINKS}</li>
+        <Link  key={NAVLINKS} to={"/" + NAVLINKS.toLowerCase().match(LINK_CHANGE).join('') + "/"}><li>{NAVLINKS}</li></Link>
         );
 
         const HIDE = {
@@ -53,8 +55,7 @@ class Navbar extends Component{
         return(
             <div>
                 <nav>
-                    <div>
-                    </div>
+                    <h1><Link to="/">Here The Scoop</Link></h1>
                     <ol>{LIST_ITEMS}</ol>
                     <div id="hamburger" onClick={this.handleClick}>
                         <div className="hamburger-slice"></div>
