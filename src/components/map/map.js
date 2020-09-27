@@ -22,20 +22,22 @@ export default class MyMap extends Component{
         const { options } = this.props
         const position = [State.lat, State.lng]
 
+        const { options } = this.props
+
         if (typeof window !== 'undefined') {
-        return (
+          return (
             <Map center={position} zoom={State.zoom} style={MAP_STYLE_ADDON} icon={ iconCone }>
-        <TileLayer
-          attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Marker position={position}>
-          <Popup>
-            Here The Scoop <br /> 755 Gardiner Rd, Dresden Me 04342
-          </Popup>
-        </Marker>
-      </Map>
-        )
+              <TileLayer
+                attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+              <Marker position={position}>
+                <Popup>
+                  Here The Scoop <br /> 755 Gardiner Rd, Dresden Me 04342
+                </Popup>
+              </Marker>
+            </Map>
+          )
         }
         return null
     }

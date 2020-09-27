@@ -2,8 +2,8 @@ import L from 'leaflet';
 
 import ConeIcon from '../../images/cone_icon.svg';
 
-/*
-delete L.Icon.Default.prototype._getIconUrl;
+
+//delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: require("../../images/cone_icon.svg"),
   iconUrl: require("../../images/cone_icon.svg"),
@@ -14,7 +14,6 @@ L.Icon.Default.mergeOptions({
   shadowSize: [68, 95],
   shadowAnchor: [-2, 74]
 });
-*/
 
 const iconCone = new L.Icon({
   iconRetinaUrl: require("../../images/cone_icon.svg"),
