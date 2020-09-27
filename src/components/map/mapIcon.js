@@ -1,4 +1,5 @@
 import L from 'leaflet';
+import 'leaflet.Icon';
 
 import ConeIcon from '../../images/cone_icon.svg';
 
@@ -15,7 +16,7 @@ import ConeIcon from '../../images/cone_icon.svg';
   shadowAnchor: [-2, 74]
 });*/
 
-const iconCone = L.Icon({
+const iconCone = new L.Icon({
   iconRetinaUrl: require("../../images/cone_icon.svg"),
   iconUrl: require("../../images/cone_icon.svg"),
   shadowUrl: require("../../images/cone_icon_shadow.svg"),
