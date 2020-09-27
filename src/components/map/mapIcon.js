@@ -15,7 +15,7 @@ import ConeIcon from '../../images/cone_icon.svg';
   shadowAnchor: [-2, 74]
 });*/
 
-const iconCone = new L.Icon({
+const iconCone = L.Icon({
   iconRetinaUrl: require("../../images/cone_icon.svg"),
   iconUrl: require("../../images/cone_icon.svg"),
   shadowUrl: require("../../images/cone_icon_shadow.svg"),
