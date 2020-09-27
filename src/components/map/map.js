@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Map, Marker, Popup, TileLayer, Icon } from 'react-leaflet'
-import iconCone from './mapIcon.js';
+import L from 'leaflet';
+import 'react-leaflet';
+import { Icon } from 'leaflet/src/layer/marker' ;
 
 const State = {
     lat: 44.119362,
@@ -15,6 +17,20 @@ const MAP_STYLE_ADDON = {
     width: '80%',
     left: '10%',
 };
+
+if (typeof window !== 'undefined') {
+  const mapIcon = MapIcon();
+  const iconCone = new L.Icon.extend({
+    iconRetinaUrl: require("../../images/cone_icon.svg"),
+    iconUrl: require("../../images/cone_icon.svg"),
+    shadowUrl: require("../../images/cone_icon_shadow.svg"),
+    iconAnchor: [47, 100],
+    popupAnchor: [0, -102],
+    iconSize: [100, 100],
+    shadowSize: [68, 95],
+    shadowAnchor: [-2, 74]
+  });
+}
 
 export default class MyMap extends Component{
 

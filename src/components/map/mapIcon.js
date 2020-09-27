@@ -1,5 +1,6 @@
 import L from 'leaflet';
 import 'react-leaflet';
+import { Icon } from 'leaflet/src/layer/marker' ;
 
 import ConeIcon from '../../images/cone_icon.svg';
 
@@ -17,6 +18,7 @@ import ConeIcon from '../../images/cone_icon.svg';
 });*/
 
 if (typeof window !== 'undefined') {
+  const mapIcon = MapIcon();
   const iconCone = new L.Icon.extend({
     iconRetinaUrl: require("../../images/cone_icon.svg"),
     iconUrl: require("../../images/cone_icon.svg"),
