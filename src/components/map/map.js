@@ -24,7 +24,7 @@ export default class MyMap extends Component{
 
         if (typeof window !== 'undefined') {
           return (
-            <Map center={position} zoom={State.zoom} style={MAP_STYLE_ADDON} icon={ iconCone }>
+            <Map center={position} zoom={State.zoom} style={MAP_STYLE_ADDON} icon={(!!iconCone) ? iconCone : null}>
               <TileLayer
                 attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
