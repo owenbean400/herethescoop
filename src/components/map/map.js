@@ -19,9 +19,7 @@ const MAP_STYLE_ADDON = {
 export default class MyMap extends Component{
 
     render(){
-        const { options } = this.props
         const position = [State.lat, State.lng]
-
         const { options } = this.props
 
         if (typeof window !== 'undefined') {
