@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Map, Marker, Popup, TileLayer, Icon } from 'react-leaflet'
 import L from 'leaflet';
 import 'react-leaflet';
-import { Icon } from 'leaflet/src/layer/marker' ;
 
 const State = {
     lat: 44.119362,
