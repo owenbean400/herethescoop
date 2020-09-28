@@ -17,23 +17,23 @@ const MAP_STYLE_ADDON = {
     left: '10%',
 };
 
-const markerIcon = new L.Icon({
-  iconRetinaUrl: require("../../images/cone_icon.svg"),
-  iconUrl: require("../../images/cone_icon.svg"),
-  shadowUrl: require("../../images/cone_icon_shadow.svg"),
-  iconAnchor: [47, 100],
-  popupAnchor: [0, -102],
-  iconSize: [100, 100],
-  shadowSize: [68, 95],
-  shadowAnchor: [-2, 74],
-});
-
 export default class MyMap extends Component{
 
     render(){
         const position = [State.lat, State.lng]
         const { options } = this.props
 
+        if (typeof window !== 'undefined') {
+          const markerIcon = new L.Icon({
+            iconRetinaUrl: require("../../images/cone_icon.svg"),
+            iconUrl: require("../../images/cone_icon.svg"),
+            shadowUrl: require("../../images/cone_icon_shadow.svg"),
+            iconAnchor: [47, 100],
+            popupAnchor: [0, -102],
+            iconSize: [100, 100],
+            shadowSize: [68, 95],
+            shadowAnchor: [-2, 74],
+          });
           return (
             <Map center={position} zoom={State.zoom} style={MAP_STYLE_ADDON}>
               <TileLayer
@@ -47,5 +47,7 @@ export default class MyMap extends Component{
               </Marker>
             </Map>
           )
+        }
+        return null
     }
 }
