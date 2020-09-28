@@ -18,7 +18,7 @@ L.Icon.Default.mergeOptions({
 });*/
 
 
-export const iconCone = L.Icon({
+export const iconCone = new L.Icon({
   iconRetinaUrl: require("../../images/cone_icon.svg"),
   iconUrl: require("../../images/cone_icon.svg"),
   shadowUrl: require("../../images/cone_icon_shadow.svg"),
