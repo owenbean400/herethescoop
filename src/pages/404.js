@@ -1,8 +1,8 @@
 import React from "react"
 
-import '../sassPages/404.sass';
+import "../sassPages/404.sass"
 
-import Navbar from '../components/navbar/navbar.js';
+import Navbar from "../components/navbar/navbar.js"
 
 const NotFoundPage = () => (
   <div>
