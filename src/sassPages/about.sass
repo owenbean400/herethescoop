@@ -1,0 +1,18 @@
+@import './variable.sass'
+    
+#about-main
+    padding: 64px
+
+    h1
+        text-align: center
+
+    #about-container
+        display: grid
+        grid-gap: 32px
+
+        @media screen and ( min-width: $tabletsize )
+            grid-template-columns: auto 500px
+        @media screen and ( min-width: $phonesize ) and ( max-width: $tabletsize)
+            grid-template-columns: auto 300px
+        @media screen and ( max-width: $phonesize )
+            grid-template-columns: auto

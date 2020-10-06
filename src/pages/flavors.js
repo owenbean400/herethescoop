@@ -3,6 +3,7 @@ import "../sassPages/flavor.sass"
 
 import Navbar from "../components/navbar/navbar.js"
 import Menu from "../components/flavor/Menu.js"
+import Footer from "../components/footer/footer.js"
 
 import BananaSplit from "../images/flavor_page/banana_split.png"
 import Wizard from "../images/flavor_page/wizard.png"
@@ -66,6 +67,7 @@ const FlavorPage = () => (
         ]}
       />
     </main>
+    <Footer />
   </div>
 )
 

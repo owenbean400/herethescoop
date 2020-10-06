@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import Button from "../components/button.js"
 import Navbar from "../components/navbar/navbar.js"
+import Footer from "../components/footer/footer.js"
 
 import "../sassPages/index.sass"
 
@@ -86,7 +87,9 @@ export default class IndexPage extends Component {
               <img
                 src={Arrow}
                 className="image-button"
+                id="arrow-left"
                 onClick={this.leftClickedIcecream}
+                alt="left arrow"
               />
               <div id="icecream-image">
                 <img src={Cone} id="icecream-image-cone" alt="ice-cream cone" />
@@ -101,7 +104,9 @@ export default class IndexPage extends Component {
               <img
                 src={Arrow}
                 className="image-button"
+                id="arrow-right"
                 onClick={this.rightClickedIcecream}
+                alt="right arrow"
               />
             </div>
             <h4>
@@ -123,7 +128,9 @@ export default class IndexPage extends Component {
                 echauffer. Maison ah tuiles terres rendre le venait ou. Altere
                 une non signes sortie trente prison.{" "}
               </p>
-              <Button buttonName="More About Us" />
+              <Link to="/ourstories">
+                <Button buttonName="More About Us" />
+              </Link>
             </div>
             <img
               src={Building}
@@ -135,19 +142,19 @@ export default class IndexPage extends Component {
             <h3>Join the Fun</h3>
             <div id="fun-active">
               <img
-                src="https://source.unsplash.com/random?0"
+                src="https://source.unsplash.com/random?200x200"
                 alt="test"
                 width="200px"
                 height="200px"
               />
               <img
-                src="https://source.unsplash.com/random?1"
+                src="https://source.unsplash.com/random?200x200"
                 alt="test"
                 width="200px"
                 height="200px"
               />
               <img
-                src="https://source.unsplash.com/random?2"
+                src="https://source.unsplash.com/random?200x200"
                 alt="test"
                 width="200px"
                 height="200px"
@@ -176,6 +183,7 @@ export default class IndexPage extends Component {
             </div>
           </section>
         </main>
+        <Footer />
       </div>
     )
   }

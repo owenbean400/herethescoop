@@ -22,7 +22,6 @@ const MAP_STYLE_ADDON = {
 export default class MyMap extends Component {
   render() {
     const position = [State.lat, State.lng]
-    const { options } = this.props
 
     //Change marker icon on map
     if (typeof window !== "undefined") {

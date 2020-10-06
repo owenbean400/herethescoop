@@ -1,0 +1,38 @@
+@import '../../sassPages/variable.sass';
+
+#footer
+    background-color: $primaryColor
+    padding: 64px
+
+    #footer-container
+        display: grid
+        @media screen and ( min-width: $phonesize )
+            grid-template-columns: auto auto
+        @media screen and ( max-width: $phonesize )
+            grid-template-columns: auto
+            grid-row-gap: 64px
+            text-align: center
+
+        ol
+            padding: 0
+            margin: 0
+            display: grid
+            list-style-type: none
+            @media screen and ( min-width: $phonesize)
+                grid-template-columns: 120px 120px
+
+            li
+                margin: 0
+                @media screen and ( max-width: $phonesize  )
+                    padding: 12px
+
+        p
+            font-weight: 600
+
+#copyright
+    position: relative
+    bottom: -54px
+    left: -54px
+    font-size: 11px
+    font-weight: 300
+    margin: 0
