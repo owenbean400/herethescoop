@@ -26,15 +26,21 @@ export default class Navbar extends Component {
       }))
     }
   }
-  //mounting resize
+  //mounting resize and onclick hamburger
   componentDidMount() {
     if (typeof window !== "undefined") {
       window.addEventListener("resize", this.handleResize)
+      document
+        .getElementById("hamburger")
+        .addEventListener("click", this.handleClick)
     }
   }
   componentWillUnmount() {
     if (typeof window !== "undefined") {
       window.removeEventListener("resize", this.handleResize)
+      document
+        .getElementById("hamburger")
+        .removeEventListener("click", this.handleClick)
     }
   }
 
@@ -64,7 +70,7 @@ export default class Navbar extends Component {
             <Link to="/">Here The Scoop</Link>
           </h1>
           <ol>{LIST_ITEMS}</ol>
-          <div id="hamburger" onClick={this.handleClick}>
+          <div id="hamburger">
             <div className="hamburger-slice"></div>
             <div className="hamburger-slice"></div>
             <div className="hamburger-slice"></div>

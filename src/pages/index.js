@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Button from "../components/button.js"
 import Navbar from "../components/navbar/navbar.js"
 import Footer from "../components/footer/footer.js"
+import SEO from "../components/seo.js"
 
 import "../sassPages/index.sass"
 
@@ -52,6 +53,28 @@ export default class IndexPage extends Component {
     }
   }
 
+  componentDidMount() {
+    if (typeof window !== "undefined") {
+      document
+        .getElementById("arrow-left")
+        .addEventListener("click", this.leftClickedIcecream)
+      document
+        .getElementById("arrow-right")
+        .addEventListener("click", this.rightClickedIcecream)
+    }
+  }
+
+  componentWillUnmount() {
+    if (typeof window !== "undefined") {
+      document
+        .getElementById("arrow-left")
+        .removeEventListener("click", this.leftClickedIcecream)
+      document
+        .getElementById("arrow-right")
+        .removeEventListener("click", this.rightClickedIcecream)
+    }
+  }
+
   render() {
     //ice flavors and images for flavor showcase on main page
     const ICECREAM_FLAVOR = {
@@ -79,6 +102,7 @@ export default class IndexPage extends Component {
 
     return (
       <div>
+        <SEO title="Here The Scoop" />
         <Navbar />
         <main id="main-main">
           <section id="flavor-picker-container">
@@ -88,7 +112,6 @@ export default class IndexPage extends Component {
                 src={Arrow}
                 className="image-button"
                 id="arrow-left"
-                onClick={this.leftClickedIcecream}
                 alt="left arrow"
               />
               <div id="icecream-image">
@@ -105,7 +128,6 @@ export default class IndexPage extends Component {
                 src={Arrow}
                 className="image-button"
                 id="arrow-right"
-                onClick={this.rightClickedIcecream}
                 alt="right arrow"
               />
             </div>

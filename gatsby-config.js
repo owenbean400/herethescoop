@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Here The Scoop`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@owenbean`,
+    description: `Here The Scoop is an ice cream place in Dresden, Maine that serves delicious icecream. `,
+    author: `owenbean`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -28,11 +28,11 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-react-leaflet',
+      resolve: "gatsby-plugin-react-leaflet",
       options: {
-        linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
-      }
-    }
+        linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

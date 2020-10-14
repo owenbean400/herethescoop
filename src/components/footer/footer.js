@@ -12,7 +12,7 @@ export default class Footer extends Component {
     const FOOTERLINK = FOOTERLINKS.map(FOOTERLINKS => (
       <Link
         to={"/" + FOOTERLINKS.toLowerCase().match(LINK_CHANGE).join("") + "/"}
-        key="FOOTERLINKS"
+        key={FOOTERLINKS + "link"}
       >
         <li>{FOOTERLINKS}</li>
       </Link>
